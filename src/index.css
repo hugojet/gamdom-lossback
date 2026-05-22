@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gamdom-dark text-white font-sans antialiased;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 85% 100%, rgba(190, 242, 100, 0.06) 0%, transparent 45%);
+  }
+
+  * {
+    @apply border-gamdom-border;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-gamdom-teal text-white font-bold rounded-lg
+           hover:bg-gamdom-teal-light hover:text-gamdom-darker transition-all duration-200
+           shadow-teal-glow hover:shadow-[0_0_44px_rgba(20,184,166,0.8)]
+           active:scale-95 font-display tracking-tight;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-gamdom-teal/60 text-gamdom-teal-light font-bold rounded-lg
+           hover:bg-gamdom-teal/15 transition-all duration-200
+           active:scale-95 font-display tracking-tight;
+  }
+
+  .btn-lime {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-gamdom-lime text-gamdom-darker font-bold rounded-lg
+           hover:bg-gamdom-lime-bright transition-all duration-200
+           shadow-lime-glow active:scale-95 font-display tracking-tight;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-display tracking-tight leading-[1.05];
+  }
+
+  .section-subheading {
+    @apply text-lg text-slate-400 mt-4 max-w-3xl leading-relaxed;
+  }
+
+  .card {
+    @apply bg-gamdom-card border border-gamdom-border rounded-lg p-6 shadow-card;
+  }
+
+  .glass-card {
+    @apply bg-gamdom-card/65 backdrop-blur-md border border-gamdom-border rounded-lg p-6 shadow-card;
+  }
+
+  .teal-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-gamdom-teal/15 text-gamdom-teal-light border border-gamdom-teal/35 rounded-md text-sm font-bold font-display tracking-wide uppercase;
+  }
+
+  .lime-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 bg-gamdom-lime/15 text-gamdom-lime border border-gamdom-lime/35 rounded-md text-sm font-bold font-display tracking-wide uppercase;
+  }
+
+  /* Scale-up card on hover — 5th distinct mechanic (vs tilt, ring, lift, scale-base) */
+  .scale-card {
+    @apply transition-all duration-300;
+  }
+  .scale-card:hover {
+    transform: scale(1.025);
+    box-shadow: 0 16px 36px -10px rgba(20, 184, 166, 0.40), 0 0 0 1px rgba(20, 184, 166, 0.25);
+  }
+}
+
+@layer utilities {
+  .text-gam-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(115deg, #14b8a6 0%, #2dd4bf 55%, #bef264 100%);
+  }
+
+  .text-teal-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gamdom-teal to-gamdom-teal-light;
+  }
+
+  .glow-teal {
+    filter: drop-shadow(0 0 14px rgba(20, 184, 166, 0.55));
+  }
+
+  .glow-lime {
+    filter: drop-shadow(0 0 14px rgba(190, 242, 100, 0.55));
+  }
+
+  .num {
+    @apply font-mono tabular-nums tracking-tight;
+  }
+}
+
+/* Floating geometric tokens for hero background */
+.token {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0.18;
+}
+
+/* Range slider — Gamdom teal */
+input[type="range"].gam-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(90deg, #284c45, #284c45);
+  border-radius: 999px;
+  height: 6px;
+  outline: none;
+}
+input[type="range"].gam-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background: #14b8a6;
+  border: 2px solid #bef264;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6);
+  transform: rotate(45deg);
+}
+input[type="range"].gam-range::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  background: #14b8a6;
+  border: 2px solid #bef264;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(20, 184, 166, 0.6);
+  transform: rotate(45deg);
+}
+
+/* Custom scrollbar — Gamdom */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1f1c;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #14b8a6, #bef264);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf;
+}
+
+/* Recharts theme */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background-color: #13302b !important;
+  border: 1px solid #284c45 !important;
+  border-radius: 10px !important;
+}
+
+/* Hex grid background variant */
+.gam-hex-bg {
+  background-image:
+    repeating-linear-gradient(0deg,    rgba(20, 184, 166, 0.08) 0, rgba(20, 184, 166, 0.08) 1px, transparent 1px, transparent 56px),
+    repeating-linear-gradient(60deg,   rgba(20, 184, 166, 0.08) 0, rgba(20, 184, 166, 0.08) 1px, transparent 1px, transparent 56px),
+    repeating-linear-gradient(-60deg,  rgba(20, 184, 166, 0.08) 0, rgba(20, 184, 166, 0.08) 1px, transparent 1px, transparent 56px);
+  mask-image: radial-gradient(ellipse at 50% 30%, black 25%, transparent 75%);
+}
+
+/* Sweeping teal/lime background for FinalCTA */
+.gam-sweep-bg {
+  background: linear-gradient(115deg,
+    rgba(20, 184, 166, 0.20) 0%,
+    rgba(190, 242, 100, 0.18) 50%,
+    rgba(20, 184, 166, 0.20) 100%);
+  background-size: 260% 260%;
+  animation: gamSweep 14s ease-in-out infinite;
+}
+
+@keyframes gamSweep {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

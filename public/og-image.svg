@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="ogTitle ogDesc">
+  <title id="ogTitle">Gamdom Lossback - Up to 20% weekly compensation</title>
+  <desc id="ogDesc">Private VIP compensation channel for Gamdom.com Elite-tier players.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#03110e"/>
+      <stop offset="55%" style="stop-color:#0a1f1c"/>
+      <stop offset="100%" style="stop-color:#13302b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#14b8a6"/>
+      <stop offset="55%" style="stop-color:#2dd4bf"/>
+      <stop offset="100%" style="stop-color:#bef264"/>
+    </linearGradient>
+    <radialGradient id="blobA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.40"/>
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="blobB" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#bef264;stop-opacity:0.30"/>
+      <stop offset="100%" style="stop-color:#bef264;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="940" cy="160" r="280" fill="url(#blobA)"/>
+  <circle cx="180" cy="500" r="260" fill="url(#blobB)"/>
+  <polygon points="220,80 256,60 292,80 292,120 256,140 220,120" fill="#14b8a6" fill-opacity="0.12" stroke="#14b8a6" stroke-opacity="0.45" stroke-width="1.5"/>
+  <polygon points="240,90 256,80 272,90 272,108 256,118 240,108" fill="#bef264" fill-opacity="0.40"/>
+  <rect x="320" y="68" width="240" height="36" rx="6" fill="#14b8a6" fill-opacity="0.15" stroke="#14b8a6" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="440" y="92" text-anchor="middle" fill="#2dd4bf" font-family="Unbounded, Inter, system-ui, sans-serif" font-size="15" font-weight="700">PRIVATE COMPENSATION CHANNEL</text>
+  <text x="60" y="230" fill="#ffffff" font-family="Unbounded, Inter, system-ui, sans-serif" font-size="64" font-weight="800">Gamdom Lossback</text>
+  <text x="60" y="320" fill="url(#accent)" font-family="Unbounded, Inter, system-ui, sans-serif" font-size="50" font-weight="800">Up to 20% weekly compensation</text>
+  <text x="60" y="388" fill="#cbd5e1" font-family="Figtree, Inter, system-ui, sans-serif" font-size="27" font-weight="500">Elite tier / Crypto rails / No rollover / Monday wire</text>
+  <line x1="60" y1="428" x2="1100" y2="428" stroke="#284c45" stroke-width="1.5"/>
+  <text x="60" y="498" fill="#94a3b8" font-family="Figtree, Inter, system-ui, sans-serif" font-size="22" font-weight="600">Brokered by Hugo - t.me/hugo_lossback_bot</text>
+  <text x="60" y="548" fill="#64748b" font-family="Figtree, Inter, system-ui, sans-serif" font-size="20">gamdom-lossback.com</text>
+</svg>
