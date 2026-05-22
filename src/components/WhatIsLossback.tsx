@@ -27,27 +27,27 @@ const collapseRows: CollapseRow[] = [
   {
     title: 'How is "net loss" defined?',
     short: 'Total wagered minus total returned, over a seven-day window.',
-    full: 'Net loss is the simple arithmetic difference between total wagered and total returned to the player across the settlement window. If you wagered $80,000 over a week and the cashier returned $74,500 in winnings, your net loss is $5,500. That figure — and nothing else — feeds the compensation calculation. Bonuses, free spins and any other operator-side credits do not enter the formula.',
+    full: 'Net loss is the simple arithmetic difference between total wagered and total returned to the player across the settlement window. If you wagered $80,000 over a week and the cashier returned $74,500 in winnings, your net loss is $5,500. That figure — and nothing else — feeds the lossback calculation. Bonuses, free spins and any other operator-side credits do not enter the formula.',
   },
   {
     title: 'What is "effective edge"?',
-    short: 'The operator margin minus the compensation share you reclaim.',
-    full: 'Effective edge is the actual playing margin you experience once compensation is applied. If Gamdom\'s blended margin is 3.2% and you receive a 20% Elite compensation rate on net losses, the effective edge becomes 3.2% × (1 − 0.20) = 2.56%. It is the single most important number when comparing reward structures: lower is better, and compensation moves it more than any other Gamdom reward mechanism.',
+    short: 'The operator margin minus the lossback share you reclaim.',
+    full: 'Effective edge is the actual playing margin you experience once lossback is applied. If Gamdom\'s blended margin is 3.2% and you receive a 20% Elite lossback rate on net losses, the effective edge becomes 3.2% × (1 − 0.20) = 2.56%. It is the single most important number when comparing reward structures: lower is better, and lossback moves it more than any other Gamdom reward mechanism.',
   },
   {
     title: 'Is rollover the same thing as wagering requirements?',
-    short: 'Yes. And the compensation deal has zero of either.',
-    full: 'Rollover and wagering requirements are the same mechanism under two names: a multiplier (typically 30× to 50× of the bonus amount) that you must wager before the rewarded funds can be withdrawn. Standard deposit bonuses are engineered around rollover. Gamdom Elite compensation, in contrast, is paid as immediately-withdrawable cash balance with no rollover multiplier whatsoever.',
+    short: 'Yes. And the lossback deal has zero of either.',
+    full: 'Rollover and wagering requirements are the same mechanism under two names: a multiplier (typically 30× to 50× of the bonus amount) that you must wager before the rewarded funds can be withdrawn. Standard deposit bonuses are engineered around rollover. Gamdom Elite lossback, in contrast, is paid as immediately-withdrawable cash balance with no rollover multiplier whatsoever.',
   },
   {
     title: 'What does "settlement window" mean?',
     short: 'A rolling Monday-to-Sunday cycle, paid the following Monday.',
-    full: 'The settlement window is the seven-day period over which your net loss is tallied. Hugo\'s structure uses a Monday-00:00-to-Sunday-23:59 UTC window. The Monday following the window closing is when the compensation amount is calculated, statement issued and crypto wire executed. Cadence is automatic and never breaks once activated.',
+    full: 'The settlement window is the seven-day period over which your net loss is tallied. Hugo\'s structure uses a Monday-00:00-to-Sunday-23:59 UTC window. The Monday following the window closing is when the lossback amount is calculated, statement issued and crypto wire executed. Cadence is automatic and never breaks once activated.',
   },
   {
-    title: 'Are bonuses and compensation stackable?',
-    short: 'Partially. Compensation always applies, regardless of bonus status.',
-    full: 'The Elite compensation rate is calculated against your raw net loss, independent of any other reward credits or bonuses sitting in your account. Public-tier bonuses can run alongside compensation in many cases, but the compensation calculation only looks at the cash-vs-cash net loss figure — bonus credits and their associated wagering progress remain a separate ledger.',
+    title: 'Are bonuses and lossback stackable?',
+    short: 'Partially. Lossback always applies, regardless of bonus status.',
+    full: 'The Elite lossback rate is calculated against your raw net loss, independent of any other reward credits or bonuses sitting in your account. Public-tier bonuses can run alongside lossback in many cases, but the lossback calculation only looks at the cash-vs-cash net loss figure — bonus credits and their associated wagering progress remain a separate ledger.',
   },
 ]
 
@@ -106,9 +106,9 @@ export default function WhatIsLossback() {
       <div className="section-container">
         <ClipReveal>
           <div className="text-center mb-16">
-            <span className="teal-badge mb-4">Compensation 101</span>
+            <span className="teal-badge mb-4">Lossback 101</span>
             <h2 className="section-heading mt-2">
-              How A Gamdom Compensation Deal{' '}
+              How A Gamdom Lossback Deal{' '}
               <span className="text-gam-gradient">Actually Works Under The Hood</span>
             </h2>
             <p className="section-subheading mx-auto mt-4">
@@ -124,7 +124,7 @@ export default function WhatIsLossback() {
             <div className="space-y-6 text-slate-300 leading-relaxed">
               <p className="text-lg">
                 A <strong className="text-white">Gamdom lossback</strong> — internally called
-                "the weekly compensation" — pays back a percentage of your net losses across
+                "the weekly lossback" — pays back a percentage of your net losses across
                 a seven-day window. Settlement happens in crypto with zero rollover, no game
                 restrictions, no minimum-odds requirement and no clawback against future
                 weeks. It is the highest-EV reward instrument on the platform and lives
@@ -136,11 +136,11 @@ export default function WhatIsLossback() {
               </p>
               <div className="space-y-4">
                 <div className="card border-l-4 border-l-gamdom-teal">
-                  <h3 className="font-bold text-white text-lg mb-2 font-display">Compensation (the deal)</h3>
+                  <h3 className="font-bold text-white text-lg mb-2 font-display">Lossback (the deal)</h3>
                   <p>
                     Tracks net loss across the seven-day window and pays a fixed percentage
                     of that figure back to your wallet. If a week closes $40,000 wagered,
-                    $35,000 returned and a net loss of $5,000, a 20% Elite compensation rate
+                    $35,000 returned and a net loss of $5,000, a 20% Elite lossback rate
                     wires{' '}
                     <strong className="text-white">$1,000 on Monday morning</strong>. No
                     rollover. No withdrawal hold. No carry-forward against next week.
@@ -168,7 +168,7 @@ export default function WhatIsLossback() {
                   <h3 className="font-bold text-white text-lg mb-2 font-display">Public reward race & loyalty</h3>
                   <p>
                     Gamdom's public Reward-Race system pays level-up bonuses, weekly drops
-                    and a top-tier rebate of around 6%–7% effective. Fine for casual play
+                    and a top-tier lossback of around 6%–7% effective. Fine for casual play
                     but plateaus far below what the partner channel can negotiate. The
                     effective ceiling is structural and unavoidable through the public
                     funnel.
@@ -176,7 +176,7 @@ export default function WhatIsLossback() {
                 </div>
               </div>
               <p>
-                The <strong className="text-white">Elite compensation rate</strong> Hugo
+                The <strong className="text-white">Elite lossback rate</strong> Hugo
                 negotiates short-circuits that ceiling. Authorised partners work directly
                 with Gamdom's VIP operations desk, which means your rate is calibrated to
                 your sustained volume — not to which loyalty colour you have climbed to. For
@@ -189,7 +189,7 @@ export default function WhatIsLossback() {
                 None of this changes single-session variance. A spiky Slot Battles run is
                 still a spiky run. What it changes is the long-run{' '}
                 <strong className="text-white">effective edge</strong>: a 3.2% statistical
-                edge combined with a 20% compensation behaves like a 2.56% effective edge
+                edge combined with a 20% lossback behaves like a 2.56% effective edge
                 over the year. That delta, compounded over annual volume, is the entire
                 reason the partner channel exists.
               </p>
@@ -200,10 +200,10 @@ export default function WhatIsLossback() {
             <div className="sticky top-8 space-y-8">
               <div className="card p-6 sm:p-8">
                 <h3 className="text-xl font-bold text-white mb-6 text-center font-display">
-                  One compensation week, drawn as a hex flow
+                  One lossback week, drawn as a hex flow
                 </h3>
                 {/* Hexagonal flow diagram — 5 hex nodes arranged in a "flower" + central hex */}
-                <svg viewBox="0 0 400 400" className="w-full max-w-sm mx-auto" aria-label="Hexagonal Gamdom compensation flow diagram">
+                <svg viewBox="0 0 400 400" className="w-full max-w-sm mx-auto" aria-label="Hexagonal Gamdom lossback flow diagram">
                   <defs>
                     <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#14b8a6" />
@@ -211,7 +211,7 @@ export default function WhatIsLossback() {
                     </linearGradient>
                   </defs>
 
-                  {/* Central hex — compensation amount */}
+                  {/* Central hex — lossback amount */}
                   <polygon
                     points="200,140 250,170 250,230 200,260 150,230 150,170"
                     fill="url(#hexGrad)"
@@ -285,7 +285,7 @@ export default function WhatIsLossback() {
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: '0×', label: 'Rollover on compensation' },
+                  { value: '0×', label: 'Rollover on lossback' },
                   { value: '20%', label: 'Elite rate ceiling' },
                   { value: '7d', label: 'Settlement window' },
                   { value: 'Mon', label: 'Wire arrives' },

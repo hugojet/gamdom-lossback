@@ -4,7 +4,7 @@ const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#why-hugo', label: 'Why Hugo' },
   { href: '#about-gamdom', label: 'About Gamdom' },
-  { href: '#calculator', label: 'Compensation Calculator' },
+  { href: '#calculator', label: 'Lossback Calculator' },
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#the-math', label: 'The Maths' },
   { href: '#faq', label: 'FAQ' },
@@ -29,7 +29,7 @@ export default function Footer() {
               <span className="text-white font-extrabold text-lg font-display">gamdom-lossback.com</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Authorised-partner compensation channel for sustained Gamdom.com players. Up
+              Authorised-partner lossback channel for sustained Gamdom.com players. Up
               to 20% of weekly net losses returned in crypto, with zero rollover, brokered
               by Hugo — your Gamdom VIP liaison.
             </p>

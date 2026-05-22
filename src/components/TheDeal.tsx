@@ -42,7 +42,7 @@ const steps = [
   },
   {
     number: 3,
-    title: 'Compensation lands every Monday',
+    title: 'Lossback lands every Monday',
     desc: 'From the next Monday onward, your net losses are aggregated automatically. The negotiated percentage clears into your Gamdom wallet in your preferred cryptocurrency, on-chain tx hash included with the statement.',
     icon: '✦',
   },
@@ -50,10 +50,10 @@ const steps = [
 
 const perks = [
   { icon: '⬡', title: 'Slot Battles & Crash priority', desc: 'Elite accounts receive elevated single-bet caps on Crash and direct entry into closed Slot Battles tournaments — events the public catalogue throttles or excludes entirely.' },
-  { icon: '⚑', title: 'Sportsbook losses included', desc: 'Net losses across the sportsbook side (parlays, live, pre-match) blend into the same weekly compensation calculation as casino activity. Public reward structures usually exclude this.' },
+  { icon: '⚑', title: 'Sportsbook losses included', desc: 'Net losses across the sportsbook side (parlays, live, pre-match) blend into the same weekly lossback calculation as casino activity. Public reward structures usually exclude this.' },
   { icon: '◆', title: 'Closed-leaderboard seeding', desc: 'Direct seeding into invite-only leaderboard races and creator-partnership tournaments that never appear on the public promo grid.' },
   { icon: '↥', title: 'Cashier ceilings lifted', desc: 'Default per-transaction withdrawal caps are raised for verified Elite accounts on request. Especially valuable for players cycling significant weekly capital between Gamdom and external wallets.' },
-  { icon: '◈', title: 'Monday breakdown statement', desc: 'Every Monday morning you receive a transparent breakdown: total wagered, total returned, net loss broken out by vertical, applied compensation rate, exact crypto amount, on-chain tx hash. Full transparency every cycle.' },
+  { icon: '◈', title: 'Monday breakdown statement', desc: 'Every Monday morning you receive a transparent breakdown: total wagered, total returned, net loss broken out by vertical, applied lossback rate, exact crypto amount, on-chain tx hash. Full transparency every cycle.' },
   { icon: '⛨', title: 'Account-level discretion', desc: 'Your tier, your negotiated rate and your wagering history stay strictly between you, Hugo and the Gamdom VIP desk. No leaderboard, no public profile, no creator rotation — Elite clients value privacy.' },
 ]
 
@@ -105,7 +105,7 @@ export default function TheDeal() {
               <div className="teal-badge mb-4">Tier 1</div>
               <h4 className="text-2xl font-extrabold text-white mb-2 font-display">Pro Tier</h4>
               <div className="num text-3xl font-extrabold text-gam-gradient mb-1">10%</div>
-              <div className="text-slate-400 text-sm mb-6">Weekly net-loss compensation</div>
+              <div className="text-slate-400 text-sm mb-6">Weekly net-loss lossback</div>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center py-2 border-b border-gamdom-border/50">
                   <span className="text-slate-400">Monthly wager band</span>
@@ -116,16 +116,19 @@ export default function TheDeal() {
                   <span className="text-white font-semibold num">$5,760</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gamdom-border/50">
-                  <span className="text-slate-400">Weekly compensation (avg)</span>
+                  <span className="text-slate-400">Weekly lossback (avg)</span>
                   <span className="text-gamdom-teal-light font-bold num">~$133</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-slate-400">Annualised compensation</span>
+                  <span className="text-slate-400">Annualised lossback</span>
                   <span className="text-gamdom-teal-light font-bold num">~$6,900</span>
                 </div>
               </div>
               <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary w-full mt-6 justify-center text-sm">
-                Apply as Pro Tier
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+                </svg>
+                Claim My Deal
               </a>
             </div>
 
@@ -137,7 +140,7 @@ export default function TheDeal() {
               <div className="teal-badge mb-4">Tier 2</div>
               <h4 className="text-2xl font-extrabold text-white mb-2 font-display">Elite Tier ⬡</h4>
               <div className="num text-3xl font-extrabold text-gam-gradient mb-1">Up to 20%</div>
-              <div className="text-slate-400 text-sm mb-6">Weekly net-loss compensation</div>
+              <div className="text-slate-400 text-sm mb-6">Weekly net-loss lossback</div>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center py-2 border-b border-gamdom-border/50">
                   <span className="text-slate-400">Monthly wager band</span>
@@ -148,16 +151,19 @@ export default function TheDeal() {
                   <span className="text-white font-semibold num">$9,360</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gamdom-border/50">
-                  <span className="text-slate-400">Weekly compensation (avg)</span>
+                  <span className="text-slate-400">Weekly lossback (avg)</span>
                   <span className="text-gamdom-teal-light font-bold num">~$432</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-slate-400">Annualised compensation</span>
+                  <span className="text-slate-400">Annualised lossback</span>
                   <span className="text-gamdom-teal-light font-bold num">~$22,400</span>
                 </div>
               </div>
               <a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" className="btn-primary w-full mt-6 justify-center text-sm animate-teal-pulse">
-                Apply as Elite
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+                </svg>
+                Claim My Deal
               </a>
             </div>
           </div>

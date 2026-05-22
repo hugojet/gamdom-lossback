@@ -1,6 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { TELEGRAM_URL, TELEGRAM_HANDLE } from '../seo/siteMeta'
+import { TELEGRAM_URL } from '../seo/siteMeta'
 
 function ClipReveal({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null)
@@ -19,10 +19,10 @@ function ClipReveal({ children, delay = 0, className = '' }: { children: React.R
 }
 
 const advantages = [
-  { glyph: '⬡', title: 'Direct line to the Gamdom VIP desk', desc: 'Hugo holds a named partner account with Gamdom\'s VIP operations team. Compensation rates, cashier escalations and tournament seeding go through one trusted inbox, not a multi-day support queue.' },
-  { glyph: '◈', title: 'Authorised partner standing', desc: 'This is not a recycled affiliate referral. Hugo runs a formal Gamdom partner book — the prerequisite for negotiating bespoke compensation deals on behalf of managed Elite accounts.' },
-  { glyph: '⚡', title: 'Compensation live within 48 hours', desc: 'No grinding the public loyalty system for weeks. Once Hugo verifies your volume snapshot, your compensation deal activates the very next Monday for the upcoming weekly window.' },
-  { glyph: '◆', title: 'Deal calibrated to your style', desc: 'A Crash-and-Mines player and a slots-heavy player need different compensation mechanics. Hugo negotiates the rate, the verticals covered and the bet caps to fit the way you actually play.' },
+  { glyph: '⬡', title: 'Direct line to the Gamdom VIP desk', desc: 'Hugo holds a named partner account with Gamdom\'s VIP operations team. Lossback rates, cashier escalations and tournament seeding go through one trusted inbox, not a multi-day support queue.' },
+  { glyph: '◈', title: 'Authorised partner standing', desc: 'This is not a recycled affiliate referral. Hugo runs a formal Gamdom partner book — the prerequisite for negotiating bespoke lossback deals on behalf of managed Elite accounts.' },
+  { glyph: '⚡', title: 'Lossback live within 48 hours', desc: 'No grinding the public loyalty system for weeks. Once Hugo verifies your volume snapshot, your lossback deal activates the very next Monday for the upcoming weekly window.' },
+  { glyph: '◆', title: 'Deal calibrated to your style', desc: 'A Crash-and-Mines player and a slots-heavy player need different lossback mechanics. Hugo negotiates the rate, the verticals covered and the bet caps to fit the way you actually play.' },
   { glyph: '↥', title: 'Cashier caps lifted on request', desc: 'Default per-transaction withdrawal ceilings get raised for verified Elite accounts working through Hugo. For players moving meaningful weekly capital, this can matter as much as the headline percentage.' },
   { glyph: '↻', title: 'Quarterly rate re-negotiation', desc: 'Volume curves shift. Every quarter Hugo re-opens the rate conversation with the Gamdom desk based on your sustained trajectory — long-term clients regularly move from Pro tier into mid-Elite brackets.' },
 ]
@@ -35,7 +35,7 @@ export default function WhyHugo() {
           <div className="text-center mb-16">
             <span className="teal-badge mb-4">The Liaison</span>
             <h2 className="section-heading mt-2">
-              Why The Compensation Flows Through{' '}
+              Why The Lossback Flows Through{' '}
               <span className="text-gam-gradient">A Named VIP Partner</span>
               <br />Rather Than A Sign-Up Page
             </h2>
@@ -60,7 +60,7 @@ export default function WhyHugo() {
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Authorised Gamdom.com partner with a direct working relationship to the VIP
                 operations desk. Specialises in onboarding Elite-volume players under bespoke
-                weekly compensation and cashier-lift agreements.
+                weekly lossback and cashier-lift agreements.
               </p>
               <div className="space-y-3 text-sm text-left">
                 <div className="flex items-center gap-3 text-slate-300">
@@ -89,7 +89,7 @@ export default function WhyHugo() {
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
                 </svg>
-                {TELEGRAM_HANDLE}
+                Claim My Deal
               </a>
             </div>
           </ClipReveal>
@@ -101,22 +101,22 @@ export default function WhyHugo() {
                 whatever welcome incentive happens to be running this month, the standard
                 Reward-Race system, default cashier ceilings, and a support inbox shared with
                 every other account. There is no human reviewing your behaviour and no one
-                negotiating on your behalf — meaningful compensation rates remain entirely
+                negotiating on your behalf — meaningful lossback rates remain entirely
                 out of reach.
               </p>
               <p>
                 An <strong className="text-white">authorised partner</strong> sits one tier
                 up the commercial stack. The partner book is a B2B layer above standard
                 referral — Hugo's relationship is directly with Gamdom's VIP operations desk,
-                the same desk that signs off compensation ceilings, cashier-cap lifts, and
+                the same desk that signs off lossback ceilings, cashier-cap lifts, and
                 discretionary tournament seeding. When Hugo presents your volume case, you
                 stop being one account in a queue and become a named player in a managed book.
               </p>
               <p>
                 For a player running $180,000+ of monthly wager across Crash, Mines, slots
-                and the sportsbook, the gap between the public top-tier compensation rate
+                and the sportsbook, the gap between the public top-tier lossback rate
                 (effectively a 5%–7% blended figure at the peak of the public ladder) and a
-                negotiated 20% Elite compensation rate works out to roughly{' '}
+                negotiated 20% Elite lossback rate works out to roughly{' '}
                 <strong className="text-white">$1,700 to $2,600 of recovered net loss per
                 week</strong>. Annualised, that figure becomes a material component of any
                 serious crypto-gambling bankroll.

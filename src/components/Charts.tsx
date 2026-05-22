@@ -21,8 +21,8 @@ function ClipReveal({ children, delay = 0, className = '' }: { children: React.R
   )
 }
 
-/* Treemap: weekly compensation distribution across player profiles.
-   Each block sized by the annual compensation amount. */
+/* Treemap: weekly lossback distribution across player profiles.
+   Each block sized by the annual lossback amount. */
 type TreemapBlock = {
   name: string
   size: number
@@ -41,7 +41,7 @@ const treemapData: TreemapBlock[] = [
 ]
 
 const wrapped: { name: string; children: TreemapBlock[] } = {
-  name: 'Annual compensation by profile',
+  name: 'Annual lossback by profile',
   children: treemapData,
 }
 
@@ -72,7 +72,7 @@ const TreemapTooltip = ({ active, payload }: { active?: boolean; payload?: Treem
       <div className="bg-gamdom-card border border-gamdom-border rounded-lg p-3 shadow-card text-sm">
         <p className="text-white font-bold font-display">{p.name}</p>
         <p className="text-slate-400 text-xs">{p.detail}</p>
-        <p className="text-gamdom-teal-light num mt-1">~${Math.round(p.size).toLocaleString()} annual compensation</p>
+        <p className="text-gamdom-teal-light num mt-1">~${Math.round(p.size).toLocaleString()} annual lossback</p>
       </div>
     )
   }
@@ -145,7 +145,7 @@ export default function Charts() {
           <div className="text-center mb-16">
             <span className="teal-badge mb-4">The Maths</span>
             <h2 className="section-heading mt-2">
-              Long-Run Effect Of A Compensation Channel —{' '}
+              Long-Run Effect Of A Lossback Channel —{' '}
               <span className="text-gam-gradient">Two Visuals, Same Underlying Maths</span>
             </h2>
             <p className="section-subheading mx-auto mt-4">
@@ -160,11 +160,11 @@ export default function Charts() {
           <ClipReveal>
             <div className="card scale-card h-full">
               <h3 className="text-xl font-bold text-white mb-2 font-display">
-                Annual compensation distribution by profile
+                Annual lossback distribution by profile
               </h3>
               <p className="text-slate-400 text-sm mb-6">
                 Each block represents a representative player profile. Block size is
-                proportional to the annualised compensation amount. The lime-coloured blocks
+                proportional to the annualised lossback amount. The lime-coloured blocks
                 are Elite-tier, the teal ones are Pro-tier.
               </p>
               <div className="h-72">
@@ -197,11 +197,11 @@ export default function Charts() {
           <ClipReveal delay={0.12}>
             <div className="card scale-card h-full">
               <h3 className="text-xl font-bold text-white mb-2 font-display">
-                Effective edge after compensation, by reward path
+                Effective edge after lossback, by reward path
               </h3>
               <p className="text-slate-400 text-sm mb-6">
                 Lower is better. Bars show what Gamdom's 3.2% blended playing edge translates
-                to once each reward structure is applied. Elite Tier compensation moves the
+                to once each reward structure is applied. Elite Tier lossback moves the
                 effective edge the most.
               </p>
               <div className="h-72">
@@ -246,7 +246,7 @@ export default function Charts() {
         <ClipReveal>
           <div className="card max-w-4xl mx-auto">
             <h3 className="text-xl font-bold text-white mb-4 font-display">
-              Why Elite compensation beats every other Gamdom reward path mathematically
+              Why Elite lossback beats every other Gamdom reward path mathematically
             </h3>
             <div className="space-y-4 text-slate-300 leading-relaxed">
               <p>
@@ -259,10 +259,10 @@ export default function Charts() {
                 retention rewards for players already producing sustained volume.
               </p>
               <p>
-                Compensation inverts the structure entirely. Suppose your sustained monthly
+                Lossback inverts the structure entirely. Suppose your sustained monthly
                 wager on Gamdom sits at $180,000 across a mixed book at ~3.2% blended edge:
                 your statistical net loss expectation lands around $5,760 per month. A 20%
-                Elite compensation rate clears roughly $1,152 of that figure, unconditionally
+                Elite lossback rate clears roughly $1,152 of that figure, unconditionally
                 and immediately withdrawable. The economic effect is a permanent shift from a
                 3.20% playing edge down to a{' '}
                 <strong className="text-white num">2.56% effective edge</strong>, applied to
@@ -270,16 +270,16 @@ export default function Charts() {
               </p>
               <p>
                 Compounded across a calendar year of sustained volume, the gap between "no
-                compensation" and "20% Elite compensation" on a $320,000/month book
+                lossback" and "20% Elite lossback" on a $320,000/month book
                 accumulates to roughly{' '}
                 <strong className="text-gamdom-teal-light num">$24,500 of recovered net
                 loss</strong>. The treemap above visualises that distribution — the
                 lime-coloured Elite blocks dwarf the public-path equivalents because
-                compensation scales linearly with both volume and rate.
+                lossback scales linearly with both volume and rate.
               </p>
               <p>
                 Variance is unchanged. A wild Crash or Slot Battles run is still a wild run.
-                What compensation changes is the long-run expected value of every dollar of
+                What lossback changes is the long-run expected value of every dollar of
                 wager you put through Gamdom — and for sustained Elite-volume players, that
                 expectancy shift is the only metric that meaningfully affects year-end
                 outcomes.

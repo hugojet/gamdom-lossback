@@ -94,13 +94,13 @@ export default function Calculator() {
           <div className="text-center mb-16">
             <span className="teal-badge mb-4">Compute The Number</span>
             <h2 className="section-heading mt-2">
-              Gamdom Compensation Calculator —{' '}
+              Gamdom Lossback Calculator —{' '}
               <span className="text-gam-gradient">What Your Monday Wire Actually Looks Like</span>
             </h2>
             <p className="section-subheading mx-auto mt-4">
               Plug in your real monthly volume, select the game category you actually play,
               choose the tier you would land on. The figures below are statistical
-              expectations of what the Monday-morning compensation wire clears.
+              expectations of what the Monday-morning lossback wire clears.
             </p>
           </div>
         </ClipReveal>
@@ -161,7 +161,7 @@ export default function Calculator() {
               </div>
 
               <div>
-                <p className="text-slate-300 font-medium mb-3">Compensation tier</p>
+                <p className="text-slate-300 font-medium mb-3">Lossback tier</p>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     onClick={() => setTier('pro')}
@@ -203,7 +203,7 @@ export default function Calculator() {
               <div className="card scale-card border-2 border-gamdom-teal/50 bg-gamdom-teal/5">
                 <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2 font-display">
                   <span className="w-8 h-8 rounded-md bg-gamdom-teal/20 flex items-center justify-center text-gamdom-teal-light">⬡</span>
-                  Compensation projection
+                  Lossback projection
                 </h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gamdom-border/40">
@@ -211,19 +211,19 @@ export default function Calculator() {
                     <SnapValue value={results.monthlyLoss} className="text-white font-bold text-lg" />
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gamdom-border/40">
-                    <span className="text-slate-400">Weekly compensation ({(compPct * 100).toFixed(0)}%)</span>
+                    <span className="text-slate-400">Weekly lossback ({(compPct * 100).toFixed(0)}%)</span>
                     <SnapValue value={results.weeklyComp} className="text-gamdom-teal-light font-extrabold text-xl" />
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gamdom-border/40">
-                    <span className="text-slate-400">Monthly compensation total</span>
+                    <span className="text-slate-400">Monthly lossback total</span>
                     <SnapValue value={results.monthlyComp} className="text-gamdom-lime font-extrabold text-xl" />
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gamdom-border/40">
-                    <span className="text-slate-400">Annual compensation projection</span>
+                    <span className="text-slate-400">Annual lossback projection</span>
                     <SnapValue value={results.annualComp} className="text-gamdom-teal-light font-extrabold text-2xl" />
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-slate-400">Effective edge after compensation</span>
+                    <span className="text-slate-400">Effective edge after lossback</span>
                     <span className="text-white font-bold text-lg num flex items-baseline gap-2">
                       <SnapPct value={results.effectiveEdge} />
                       <span className="text-xs text-gamdom-teal-light">(vs {(category.edgePct * 100).toFixed(1)}%)</span>
@@ -238,7 +238,7 @@ export default function Calculator() {
                   <div className="text-5xl font-extrabold text-gam-gradient mb-2">
                     <SnapValue value={results.annualComp} />
                   </div>
-                  <div className="text-slate-200 font-medium font-display">Projected yearly compensation</div>
+                  <div className="text-slate-200 font-medium font-display">Projected yearly lossback</div>
                   <div className="mt-3 text-sm text-slate-300">
                     Roughly{' '}
                     <strong className="text-white num">{formatUSD(results.monthlyComp)}/month</strong>{' '}
@@ -254,7 +254,10 @@ export default function Calculator() {
                 rel="noopener noreferrer"
                 className="btn-primary w-full justify-center"
               >
-                Send Hugo Your Volume Snapshot ↗
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z" />
+                </svg>
+                Claim My Deal
               </a>
             </div>
           </ClipReveal>

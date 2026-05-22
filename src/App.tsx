@@ -91,13 +91,13 @@ export default function App() {
         <meta property="og:image" content={OG_IMAGE_URL} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Gamdom Lossback — up to 20% weekly compensation for Elite-tier players" />
+        <meta property="og:image:alt" content="Gamdom Lossback — up to 20% weekly lossback for Elite-tier players" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={SITE_TITLE} />
         <meta name="twitter:description" content={OG_DESCRIPTION} />
         <meta name="twitter:image" content={OG_IMAGE_URL} />
-        <meta name="twitter:image:alt" content="Gamdom Lossback — Elite VIP compensation channel" />
+        <meta name="twitter:image:alt" content="Gamdom Lossback — Elite VIP lossback channel" />
 
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>

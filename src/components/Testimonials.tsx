@@ -51,7 +51,7 @@ const testimonials: Testimonial[] = [
   },
   {
     short: 'The Monday statement is what I value most — full transparency every cycle.',
-    quote: `What kept me on the channel long-term is the Monday breakdown. Every week at 10am UTC I receive a clean PDF: total wagered, total returned, net loss split by vertical, applied compensation rate, exact crypto amount, on-chain tx hash. Eight months in, the cumulative recovered amount is within 1.2% of what Hugo originally projected. That kind of forecast accuracy is genuinely rare in this industry.`,
+    quote: `What kept me on the channel long-term is the Monday breakdown. Every week at 10am UTC I receive a clean PDF: total wagered, total returned, net loss split by vertical, applied lossback rate, exact crypto amount, on-chain tx hash. Eight months in, the cumulative recovered amount is within 1.2% of what Hugo originally projected. That kind of forecast accuracy is genuinely rare in this industry.`,
     username: 'C.O.',
     location: 'Cork, Ireland',
     flag: '🇮🇪',

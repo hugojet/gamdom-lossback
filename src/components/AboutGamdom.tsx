@@ -79,7 +79,7 @@ export default function AboutGamdom() {
             <p className="section-subheading mx-auto mt-4">
               Gamdom has been operating since 2016 — long enough to have accumulated the
               kind of player base, originals catalogue and sportsbook depth that supports a
-              meaningful VIP compensation programme. Here is the platform context behind the
+              meaningful VIP lossback programme. Here is the platform context behind the
               channel.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function AboutGamdom() {
               <p>
                 The sportsbook brings the rest of the wallet to life. Pre-match, live and
                 parlay flows all share the same balance with the casino — which is exactly
-                what allows the Elite compensation channel to net losses across both
+                what allows the Elite lossback channel to net losses across both
                 verticals into a single weekly figure rather than treating them as separate
                 ledgers. For a multi-vertical player that single-wallet detail is a
                 meaningful structural advantage.
@@ -137,7 +137,7 @@ export default function AboutGamdom() {
                 <strong className="text-white">a mature originals catalogue, fast crypto
                 rails, deep third-party slot coverage and a unified casino + sportsbook
                 wallet</strong> is exactly the kind of platform context where a negotiated
-                compensation deal compounds cleanly. The deal Hugo brokers takes an already
+                lossback deal compounds cleanly. The deal Hugo brokers takes an already
                 solid operator and turns the long-run economics noticeably in the player's
                 favour.
               </p>
@@ -148,7 +148,7 @@ export default function AboutGamdom() {
             {[
               { glyph: '⬡', title: 'Provably fair originals', desc: 'Crash, Mines, Plinko, Cups, Slot Battles, Roulette — each round publishes a verifiable server- and client-seed pair, every outcome independently auditable.' },
               { glyph: '◆', title: 'Sub-15-minute crypto cashier', desc: 'BTC, ETH, USDT, USDC, LTC, BCH, DOGE, TRX, ADA — most coins clear external withdrawals in under fifteen minutes on Elite-tier accounts.' },
-              { glyph: '◈', title: 'Casino + sportsbook unified', desc: '4,500+ casino titles plus a deep sportsbook share a single wallet. Losses across both verticals net into a single weekly compensation calculation.' },
+              { glyph: '◈', title: 'Casino + sportsbook unified', desc: '4,500+ casino titles plus a deep sportsbook share a single wallet. Losses across both verticals net into a single weekly lossback calculation.' },
               { glyph: '⛨', title: 'Curacao licensed operator', desc: 'Operated by Hollycorn N.V. under Curacao gaming licence. Built-in responsible-play controls, session limits, deposit caps and self-exclusion available across all accounts.' },
             ].map((feature) => (
               <div key={feature.title} className="card scale-card flex gap-4">
@@ -180,7 +180,7 @@ export default function AboutGamdom() {
 
         <ClipReveal>
           <h3 className="text-center text-lg font-semibold text-slate-300 mb-6 font-display tracking-wide uppercase">
-            Crypto rails settled in every compensation payout
+            Crypto rails settled in every lossback payout
           </h3>
           {/* Chip-grid (3-column flex grid wrapping) */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-3">
